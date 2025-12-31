@@ -1,11 +1,5 @@
-number=int(input("Enter Nunber check"))
-print("number to be checked:",number)
-
-if number>0:
-    print("this is a positive number")
-
-elif number<0:
-    print("This is a negetive number")
-
-else:
-    print("This is neutral")
+num = 17
+print("Table of 17")
+for i in range(1,11):
+    mul = num*i
+    print("17 x %d = %d" % (i,mul))
