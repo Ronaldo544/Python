@@ -1,13 +1,15 @@
-num = 1094573458274924624527423598043756309852375936012513264583
+def isPalindrome(string):
+    left_pos = 0
+    right_pos = len(string) - 1
 
-flag = False
-if num > 1: 
-    #check for factors
-    for i in range(2,num):
-        if (num % i) ==0:
-            flag = True
-            break
-if flag:
-    print(num,"is not a prime number")
-else:
-    print(num,"is a prime number")
+
+    while right_pos  >= left_pos :
+        if not string[left_pos] ==string[right_pos]:
+            return False
+        left_pos += 1
+        right_pos -= 1
+    return True
+
+
+print("Is this a Palindrome?")
+print(isPalindrome('detartrated'))

@@ -1,7 +1,10 @@
-num = 1
-sum = 0
-while(num<=67):
+def absolute_value(num):
+    
+    if num >= 0:
+        return num
+    else:
+        return -num
+    
+print("Absolute Value of 89 :", absolute_value(89))
 
-  sum = sum+num
-  num = num+1
-print("Sum of first 10 nutural numbers: ", sum)
+print("Absolute Value of -189 :", absolute_value(-189))
