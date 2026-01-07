@@ -1,15 +1,29 @@
-def isPalindrome(string):
-    left_pos = 0
-    right_pos = len(string) - 1
+class CSSstudent:
+  stream = "cse"
 
 
-    while right_pos  >= left_pos :
-        if not string[left_pos] ==string[right_pos]:
-            return False
-        left_pos += 1
-        right_pos -= 1
-    return True
 
 
-print("Is this a Palindrome?")
-print(isPalindrome('detartrated'))
+  def __init__(self,roll):
+
+    self.roll = roll
+  def setAddress(self, adress):
+    self.setAddress = adress
+
+  def getAddress(self):
+    return self.getAddress
+  
+add = CSSstudent(101)
+add.setAddress("Pune, Maharashtra")
+print(add.getAddress())
+
+a = CSSstudent(101)
+b = CSSstudent(102)
+
+print(a.stream)
+print(b.stream)
+print(a.roll)
+
+print(CSSstudent.stream)
+
+
