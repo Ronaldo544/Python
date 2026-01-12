@@ -1,26 +1,13 @@
-class Parrot:
-    species = "bird"
+class Rectangle():
+    def __init__(self,l,w):
+        self.length = l
+        self.width = w
 
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-    def sing(self, song):
-        return "{} sings {}".format(self.name, song)
+    def rectangle_area(self):
+        return self.length*self.width
     
-    def dance(self):
-        return "{} is now dancing".format(self.name)
-        
-blu = Parrot("Blu",10)
-print(blu.sing("Happy Birthday"))
-print(blu.dance())
-woo = Parrot("Woo",15)
-
-print("Blu is {}".format(blu.species))
-print("Woo is also a {}".format(woo.species))
-
-print("{} is {} years old".format( blu.name, blu.age))
-print("{} is {} years old".format( woo.name, woo.age))
-
-
-
-
+    
+newRectangle = Rectangle(12,10)
+print("Dimension of Rectangle - Length : %d Width : %d" % (newRectangle.length, newRectangle.width))
+print("Area of Rectangle : ", newRectangle.rectangle_area())
+      
