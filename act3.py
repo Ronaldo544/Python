@@ -1,29 +1,11 @@
-class CSSstudent:
-  stream = "cse"
+file = open("Codingal.txt","r",encoding='utf-8')
+counter = 0
 
+Content = file.read()
+CoList = Content.split("\n")
 
-
-
-  def __init__(self,roll):
-
-    self.roll = roll
-  def setAddress(self, adress):
-    self.setAddress = adress
-
-  def getAddress(self):
-    return self.getAddress
-  
-add = CSSstudent(101)
-add.setAddress("Pune, Maharashtra")
-print(add.getAddress())
-
-a = CSSstudent(101)
-b = CSSstudent(102)
-
-print(a.stream)
-print(b.stream)
-print(a.roll)
-
-print(CSSstudent.stream)
-
-
+for i in CoList:
+    if i:
+        counter += 1
+print("This is the number of lines in the file")
+print(counter)
