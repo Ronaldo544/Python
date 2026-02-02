@@ -1,13 +1,12 @@
-class Rectangle():
-    def __init__(self,l,w):
-        self.length = l
-        self.width = w
+file= open('Codingal.txt', 'r',encoding='utf-8')
+print(file.read())
+file.close()
 
-    def rectangle_area(self):
-        return self.length*self.width
-    
-    
-newRectangle = Rectangle(12,10)
-print("Dimension of Rectangle - Length : %d Width : %d" % (newRectangle.length, newRectangle.width))
-print("Area of Rectangle : ", newRectangle.rectangle_area())
-      
+file = open('Codingal.txt', 'r',encoding='utf-8')
+print("\n Read in parts \n")
+print(file.read(8))
+file.close()
+
+file = open('Codingal.txt', 'a',encoding='utf-8')
+file.write("Hi! I am Penguin and I am 1 yr old.")
+file.close()

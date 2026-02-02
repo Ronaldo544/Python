@@ -1,78 +1,14 @@
-from turtle import*
+file_read = open('Codingal.txt', 'r',encoding='utf-8')
+print("File in Read Mode -")
+print(file_read.read())
+file_read.close()
 
-#A function is defined for each part, with following steps
-# 1. Pen up 
-# 2. move to correct position
-# 3. Pen down
-# 4. draw
-# 5. return home  
+file_write = open('Codingal.txt', 'w',encoding='utf-8')
+file_write.write(" File in write mode....")
+file_write.write("Hi! I am penguin. I am 1 yr. old")
+file_write.close()
 
-class Face:
-    def __init__(self, xpos, ypos):
-        self.size = 90
-        self.coord = (xpos, ypos)
-        self.noseSize = 'small'
-
-    def setSize(self, radius):
-        self.size = radius
-
-    def draw(self):
-        self.goHome()
-        pensize(3)
-        speed(0)
-        self.drawOutline()
-        self.drawEye(135)
-        self.drawEye(45)
-        self.drawMouth()
-        self.drawNose()
-        pensize(5)
-
-    def goHome(self):
-        penup()
-        goto(self.coord)
-
-        setheading(0)
-
-    def drawOutline(self):
-        penup()
-        forward(self.size)
-        left(90)
-        pendown()
-        circle(self.size)
-        self.goHome()
-
-    def drawEye(self, turn):
-        penup()
-        left(turn)
-        forward(self.size / 2)
-        pendown()
-        dot(self.size/10)
-        self.goHome()
-
-    def drawMouth(self):
-        penup()
-        right(135)
-        forward(self.size/1.7)
-        left(90)
-        pendown()
-        circle(self.size/1.7,90)
-        self.goHome()
-
-    def drawNose(self):
-        if self.noseSize == 'large' :
-            dot(self.size/2, "grey")
-        elif self.noseSize == 'small' :
-            dot(self.size/6, "grey")
-        else : 
-            dot(self.size/4, "grey")
-        self.goHome()
-f1 = Face(0,0)
-f1.draw()
-
-showturtle()
-done()
-
-
-
-
-
+file_append = open('Codingal.txt', 'a',encoding='utf-8')
+file_append.write("\n File in append mode....")
+file_append.write("Hi! I am penguin. I am 1yr. old")
+file_append.close()
