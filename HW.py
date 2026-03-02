@@ -1,47 +1,31 @@
-slam_book = []
+# Simple Calculator
 
-def add_friends():
-    name = input("Enter name: ")
-    phone = input("Enter phone number:")
-    fav_food = input("Enter favourite food:")
+print("Simple Calculator")
+print("Choose an operation")
+print("1. Addition(+)")
+print("2. Subtraction(-)")
+print("3. Multipication(*)")
+print("4. Divison (/)")
 
-    friend = {
-        "Name": name,
-        "Phone": phone,
-        "Favourite Food": fav_food
-    }
+choice = input("Enter your choice (1/2/3/4):")
 
-    slam_book.append(friend)
-    print("Friend added successfully! \n")
+num1 = float(input("Enter first number:"))
+num2 = float(input("Enter second number:"))
 
-def view_friend():
-    if not slam_book:
-        print("Slam Book is empty. \n")
+if choice == "1":
+    print("Result:", num1 = num2)
+
+elif choice == "2":
+    print("Result:",num1 - num2)
+
+elif choice == "3":
+    print("Result", num1 * num2)
+
+elif choice == "4":
+    if num2 != 0:
+        print("Result", num1/num2)
     else:
-        for i, friend in enumerate(slam_book, start=1):
-            print(f"\nFriend {i}")
-            print("Name:",friend["Name"])
-            print("Phone:", friend["Phone"])
-            print("Fvourite Food:", friend["Favourite Food"])
-        print()
+        print("Error: Cannot divide by zero")
 
-while True:
-    print("SLAM BOOK MENU")
-    print("1. Add Friend")
-    print("2. View Friends")
-    print("3. Exit")
-
-    choice = input("Enter your choice: ")
-
-    if choice == "1":
-        add_friends()
-    elif choice == "2":
-        view_friend()
-    elif choice == "3":
-        print("Exiting Slam Book. Bye!")
-        break
-    else:
-        print("Invalid choice. Try again. \n")
-
-
-
+else:
+    print("Invalid choice")
